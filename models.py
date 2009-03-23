@@ -1,4 +1,7 @@
+from google.appengine.ext import db
 
+class Burndown(db.Model):
+    owner = db.UserProperty()
 
 # Burndown
 # Name

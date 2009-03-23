@@ -6,3 +6,4 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 from handlers import urls
 
 application = webapp.WSGIApplication(urls, debug=True)
+run_wsgi_app(application)
