@@ -16,5 +16,15 @@ class MainPage(MyRequestHandler):
 
         self.render_to_response('burn/index.html', c)
 
+class NewChart(MyRequestHandler):
+    
+    @login_required
+    def get(self):
+        self.render_to_response('burn/chart_create.html')
+    
+    @login_required
+    def post(self):
+        pass
+
 urls = [('/', MainPage),
-        ]
+        ('/create/', NewChart)]
